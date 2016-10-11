@@ -1,0 +1,11 @@
+.guilabel {
+  font-weight: bold;
+}
+
+.menuselection {
+  font-weight: bold;
+}
+
+.option {
+    font-family: monospace;
+}
