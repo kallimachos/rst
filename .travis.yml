@@ -1,0 +1,7 @@
+language: python
+branches:
+  only: master
+python: "3.4"
+install: pip install tox
+script: tox
+after_success: ./tools/deploy.sh

@@ -1,0 +1,4 @@
+bashate
+doc8
+sphinx>=1.4.1
+sphinx_rtd_theme>=0.1.9

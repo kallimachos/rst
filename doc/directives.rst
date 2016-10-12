@@ -42,6 +42,10 @@ Term
 
 :term:`terminology` renders text as a link to the entry in the glossary.
 
+
+Glossary
+~~~~~~~~
+
 .. glossary::
 
    terminology
