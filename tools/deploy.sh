@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$TRAVIS_REPO_SLUG" == "kallimachos/docs" ] && \
+if [ "$TRAVIS_REPO_SLUG" == "kallimachos/rst" ] && \
     [ "$TRAVIS_PULL_REQUEST" == "false" ] && \
     [ "$TRAVIS_BRANCH" == "master" ]; then
 
@@ -23,10 +23,10 @@ if [ "$TRAVIS_REPO_SLUG" == "kallimachos/docs" ] && \
     git push -fq origin gh-pages > /dev/null
 
     if test `tput -T $TERM colors` -lt 256; then
-        echo "Docs published to http://kallimachos.github.io/docs"
+        echo "Docs published to http://kallimachos.github.io/rst"
     else
         tput -T $TERM setaf 2
-        echo "Docs published to http://kallimachos.github.io/docs"
+        echo "Docs published to http://kallimachos.github.io/rst"
         tput -T $TERM sgr0
     fi
 
