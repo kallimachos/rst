@@ -13,7 +13,7 @@ if [ "$TRAVIS_REPO_SLUG" == "kallimachos/rst" ] && \
     git config --global user.name "travis-ci"
     git clone --quiet \
         --branch=gh-pages \
-        https://$GH_TOKEN@github.com/kallimachos/docs gh-pages > /dev/null
+        https://$GH_TOKEN@github.com/kallimachos/rst gh-pages > /dev/null
 
     cd gh-pages
     find * -not -name ".*" -delete
