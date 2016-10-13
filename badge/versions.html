@@ -1,0 +1,25 @@
+<!-- HTML for version selector badge. -->
+<div class="rst-versions rst-badge">
+  <span class="rst-current-version">
+   <span class="fa fa-book">&nbsp;</span>
+   v: {{ version }}
+   <span class="fa fa-caret-down"></span>
+ </span>
+ <div class="rst-other-versions">
+   <dl>
+     <dt>Versions</dt>
+     {% for slug, url in versions %}
+       <dd><a href="{{ url }}">{{ slug }}</a></dd>
+     {% endfor %}
+   </dl>
+   <dl>
+     <dt>Online docs</dt>
+       <dd>
+         <a href="http://docs.openstack.org/developer/{{ slug }}/?fromdocs={{ slug }}">Project Home</a>
+       </dd>
+       <dd>
+         <a href="http://docs.openstack.org/">OpenStack Documentation</a>
+       </dd>
+   </dl>
+ </div>
+</div>
