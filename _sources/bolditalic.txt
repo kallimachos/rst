@@ -7,8 +7,6 @@ This is normal text.
 
 **This is bold.**
 
-.. role:: bolditalic
-
 :bolditalic:`This is bold and italic.`
 
 .. raw:: html
@@ -65,3 +63,15 @@ Replacement
 I recommend you try |Python|.
 
 .. |Python| replace:: Python, *the* best language around
+
+
+Different approach
+~~~~~~~~~~~~~~~~~~
+
+.. role:: b(emphasis)
+
+:b:`Is this bold italic?`
+
+.. role:: strike(strong)
+
+:strike:`This is bold struck.`
