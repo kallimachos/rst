@@ -43,6 +43,12 @@ Term
 :term:`terminology` renders text as a link to the entry in the glossary.
 
 
+Bolditalic global role
+~~~~~~~~~~~~~~~~~~~~~~
+
+:bolditalic:`This should be bold and italic.`
+
+
 Glossary
 ~~~~~~~~
 
