@@ -7,4 +7,4 @@ This is a document and repo for experimenting with Sphinx and RST.
    :maxdepth: 2
 
    bolditalic.rst
-   directives.rst
+   roles.rst

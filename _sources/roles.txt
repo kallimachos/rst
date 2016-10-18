@@ -1,5 +1,5 @@
-Directives
-==========
+Roles
+=====
 
 From https://github.com/rackerlabs/docs-workstream/issues/89
 
@@ -25,9 +25,7 @@ differentiated enough to be useful)`
 Option
 ~~~~~~
 
-.. role:: opt
-
-:opt:`renders text as monospace`
+See the :option:`dest_dir` option for more details.
 
 
 Sample
@@ -47,6 +45,14 @@ Bolditalic global role
 ~~~~~~~~~~~~~~~~~~~~~~
 
 :bolditalic:`This should be bold and italic.`
+
+
+Command option directive
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. option:: dest_dir
+
+   Destination directory.
 
 
 Glossary
