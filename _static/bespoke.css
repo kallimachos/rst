@@ -1,0 +1,19 @@
+.strike {
+  text-decoration: line-through;
+}
+
+.b {
+    font-weight: bold;
+}
+
+.i {
+    font-style: italic;
+}
+
+.guilabel {
+  font-weight: bold;
+}
+
+.menuselection {
+  font-weight: bold;
+}
