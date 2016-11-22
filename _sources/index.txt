@@ -1,3 +1,4 @@
+=============================
 Welcome to Sphinx experiments
 =============================
 
@@ -8,3 +9,4 @@ This is a document and repo for experimenting with Sphinx and RST.
 
    bolditalic.rst
    roles.rst
+   symbols.rst
