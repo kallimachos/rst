@@ -1,3 +1,4 @@
+================
 Bold with italic
 ================
 
@@ -7,7 +8,7 @@ This is normal text.
 
 **This is bold.**
 
-:bolditalic:`This is bold and italic.`
+:bolditalic:`This is bold and italic using the :bolditalic: role.`
 
 .. raw:: html
 

@@ -8,5 +8,6 @@ This is a document and repo for experimenting with Sphinx and RST.
    :maxdepth: 2
 
    bolditalic.rst
+   remotecode.rst
    roles.rst
    symbols.rst
