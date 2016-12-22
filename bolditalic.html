@@ -20,7 +20,8 @@
         VERSION:     '0.0.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
-        HAS_SOURCE:  true
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
       };
     </script>
     <script type="text/javascript" src="_static/jquery.js"></script>
@@ -28,8 +29,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="top" title="Sphinx experiments 0.0.1 documentation" href="index.html" />
-    <link rel="next" title="Roles" href="roles.html" />
+    <link rel="next" title="Remotecode" href="remotecode.html" />
     <link rel="prev" title="Welcome to Sphinx experiments" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -51,12 +51,12 @@
 <p>This is normal text.</p>
 <p><em>This is italics.</em></p>
 <p><strong>This is bold.</strong></p>
-<p><span class="bolditalic">This is bold and italic.</span></p>
+<p><span class="bolditalic">This is bold and italic using the :bolditalic: role.</span></p>
 <b><i>This is bold and italics using raw html.</i></b><p><span class="strike">This is struckthrough.</span></p>
 <p><span class="strike">Bold italic and strikethrough.</span></p>
 <div class="section" id="stackoverflow-examples">
 <h2>Stackoverflow examples<a class="headerlink" href="#stackoverflow-examples" title="Permalink to this headline">¶</a></h2>
-<div class="strike container">
+<div class="strike docutils container">
 Here the full block of test is striked through.</div>
 <p class="strike">This paragraph too is is striked through.</p>
 <div class="strike admonition">
@@ -66,14 +66,14 @@ Here the full block of test is striked through.</div>
 </div>
 <div class="section" id="hybrids">
 <h2>Hybrids<a class="headerlink" href="#hybrids" title="Permalink to this headline">¶</a></h2>
-<div class="strike container">
+<div class="strike docutils container">
 Here is some text <span class="bolditalic">that is bold and italic</span>.</div>
 </div>
 <div class="section" id="rst-native">
 <h2>RST native<a class="headerlink" href="#rst-native" title="Permalink to this headline">¶</a></h2>
 <p><em>This style</em> is the same as <em>this style</em>.</p>
 <p><strong>This style</strong> is the same as <strong>this style</strong>.</p>
-<div class="emphasis container">
+<div class="emphasis docutils container">
 Does this work? No it does not.</div>
 </div>
 <div class="section" id="replacement">
@@ -109,14 +109,14 @@ Does this work? No it does not.</div>
 <ul>
   <li><a href="index.html">Documentation overview</a><ul>
       <li>Previous: <a href="index.html" title="previous chapter">Welcome to Sphinx experiments</a></li>
-      <li>Next: <a href="roles.html" title="next chapter">Roles</a></li>
+      <li>Next: <a href="remotecode.html" title="next chapter">Remotecode</a></li>
   </ul></li>
 </ul>
 </div>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/bolditalic.txt"
+      <li><a href="_sources/bolditalic.rst.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -138,11 +138,11 @@ Does this work? No it does not.</div>
       &copy;2016, Brian Moss.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.4.8</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.1</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.9</a>
       
       |
-      <a href="_sources/bolditalic.txt"
+      <a href="_sources/bolditalic.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
