@@ -9,5 +9,6 @@ This is a document and repo for experimenting with Sphinx and RST.
 
    bolditalic.rst
    remotecode.rst
+   remoteinclude.rst
    roles.rst
    symbols.rst

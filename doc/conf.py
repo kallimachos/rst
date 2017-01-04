@@ -18,7 +18,8 @@
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = ['chios.bolditalic',
-              'chios.remotecode']
+              'chios.remotecode',
+              'chios.remoteinclude']
 
 sphinxmark_enable = True
 
