@@ -12,3 +12,8 @@ This is a document and repo for experimenting with Sphinx and RST.
    remoteinclude.rst
    roles.rst
    symbols.rst
+
+Search in this guide
+~~~~~~~~~~~~~~~~~~~~
+
+* :ref:`search`
