@@ -41,7 +41,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Sphinx experiments'
-copyright = u'2016, Brian Moss'
+copyright = u'2017, Brian Moss'
 author = u'Brian Moss'
 
 # The version info for the project you're documenting, acts as replacement for
