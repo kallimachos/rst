@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Syntax &#8212; Sphinx experiments 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bespoke.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bolditalic.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Symbols" href="symbols.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body role="document">
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="syntax">
+<h1>Syntax<a class="headerlink" href="#syntax" title="Permalink to this headline">¶</a></h1>
+<p>The user variables files for RPCO are broken out into the following:</p>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">user_osa_variables_defaults.yml</span></code> - This file contains any
+variables specific to the OpenStack-Ansible project that are
+overridden and are now the default values for RPCO deployments.
+This file should not be modified by deployers.</li>
+<li><code class="docutils literal"><span class="pre">user_rpco_variables_defaults.yml</span></code> - This file contains RPCO
+variables that are exclusive to the RPCO playbooks and roles. i.e.
+rpc_maas, rpc-support. The values defined in here will be used for
+RPCO deployments by default. This file should not be modified by
+deployers.</li>
+<li><code class="docutils literal"><span class="pre">user_osa_variables_overrides.yml</span></code> - Any OpenStack-Ansible variable
+that needs to be overridden by the deployer can be specified in this
+file.</li>
+<li><code class="docutils literal"><span class="pre">user_rpco_variables_overrides.yml</span></code> - Any RPCO specific variable
+that needs to be overridden by the deployer can be specified in this
+file.</li>
+<li><code class="docutils literal"><span class="pre">user_rpco__secrets.yml</span></code> - This file contains RPCO specific
+variables that are used as passwords, keys, or tokens. These values
+are populated by running the <code class="docutils literal"><span class="pre">pw-token-gen.py</span></code> script in the
+OpenStack-Ansible <code class="docutils literal"><span class="pre">scripts/</span></code> directory. For example:</li>
+</ul>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">opt</span><span class="o">/</span><span class="n">rpc</span><span class="o">-</span><span class="n">openstack</span><span class="o">/</span><span class="n">openstack</span><span class="o">-</span><span class="n">ansible</span><span class="o">/</span><span class="n">scripts</span> <span class="o">&amp;&amp;</span> <span class="o">./</span><span class="n">pw</span><span class="o">-</span><span class="n">token</span><span class="o">-</span><span class="n">gen</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">file</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">openstack_deploy</span><span class="o">/</span><span class="n">user_rpco_secrets</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">conf.d/ceph.yml.aio</span></code> - This file contains target host
+configurations for an AIO ceph infrastructure. It defines ceph
+monitor hosts, osds hosts, and storage hosts for an AIO ceph
+deployment. For more information, please see
+<a class="reference external" href="https://pages.github.rackspace.com/rpc-internal/docs-rpc/rpc-install-internal/ch-ceph.html#deploy-ceph">https://pages.github.rackspace.com/rpc-internal/docs-rpc/rpc-install-internal/ch-ceph.html#deploy-ceph</a></li>
+<li><dl class="first docutils">
+<dt><code class="docutils literal"><span class="pre">env.d/</span></code></dt>
+<dd><ul class="first last">
+<li><code class="docutils literal"><span class="pre">ceph.yml</span></code> - Container groups and service mappings for the ceph software components are defined here.</li>
+<li><code class="docutils literal"><span class="pre">elasticsearch.yml</span></code> - Container groups and service mappings for the elasticsearch software components are defined here.</li>
+<li><code class="docutils literal"><span class="pre">kibana.yml</span></code> - Container groups and service mappings for the kibana software components are defined here.</li>
+<li><code class="docutils literal"><span class="pre">logstash.yml</span></code> - Container groups and service mappings for the logstash software components are defined here.</li>
+<li><code class="docutils literal"><span class="pre">nova.yml</span></code> - This file is copied over to /etc/openstack_deploy/ and overrides the service mappings for the <code class="docutils literal"><span class="pre">nova_compute_container</span></code> group. This is due to the way OSA creates these group/service mappings to account for the openvswitch service. Since RPCO does not support openvswitch, there is a need to override this group/service mapping so the neutron agent containers do not get associated with the <code class="docutils literal"><span class="pre">nova_compute_container</span></code> group. For information please see <a class="reference external" href="https://bugs.launchpad.net/openstack-ansible/+bug/1645979">https://bugs.launchpad.net/openstack-ansible/+bug/1645979</a></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>For more information about understanding container groups, please see
+<a class="reference external" href="http://docs.openstack.org/project-deploy-guide/openstack-ansible/newton/app-custom-layouts.html">http://docs.openstack.org/project-deploy-guide/openstack-ansible/newton/app-custom-layouts.html</a></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="symbols.html" title="previous chapter">Symbols</a></li>
+  </ul></li>
+</ul>
+</div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/syntax.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Brian Moss.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.5.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/syntax.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
